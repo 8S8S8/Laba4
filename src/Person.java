@@ -1,11 +1,12 @@
+import java.util.Objects;
 
 public class Person implements Cloneable {
     private String fName ;
     private String sName;
 
     public Person(String fName,String sName){
-        setfName(fName);
-        setsName(sName);
+        this.fName = Objects.requireNonNull(fName);
+        this.sName = Objects.requireNonNull(sName);
     }
 
     public String getfName() {
